@@ -10,7 +10,7 @@ stack.centerAlignContent();
 
 // Add the image to the stack
 let imgEl = stack.addImage(img);
-imgEl.imageSize = new Size(40, 40); // image size in points
+imgEl.imageSize = new Size(249, 140); // image size in points
 imgEl.cornerRadius = 8;
 stack.addSpacer(8); // space between image and text
 
