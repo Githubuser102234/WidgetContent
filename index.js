@@ -1,9 +1,29 @@
+// Background color
 widget.backgroundColor = new Color("#222");
 
-let t = widget.addText("Hello World!");
+// Load an image (replace URL with your own)
+let img = await loadImage("https://i.imgur.com/5b3a4tF.png");
+
+// Create a horizontal stack for image + text
+let stack = widget.addStack();
+stack.centerAlignContent();
+
+// Add the image to the stack
+let imgEl = stack.addImage(img);
+imgEl.imageSize = new Size(40, 40); // image size in points
+imgEl.cornerRadius = 8;
+stack.addSpacer(8); // space between image and text
+
+// Add text next to the image
+let tStack = stack.addStack();
+tStack.layoutVertically();
+
+// Main title text
+let t = tStack.addText("Hello World!");
 t.textColor = Color.white();
 t.font = Font.boldSystemFont(16);
 
-let s = widget.addText("Updated remotely @ 9:55 🎉");
+// Subtitle text
+let s = tStack.addText("Updated remotely 🎉");
 s.textColor = Color.gray();
 s.font = Font.systemFont(12);
