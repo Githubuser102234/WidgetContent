@@ -2,7 +2,7 @@
 widget.backgroundColor = new Color("#222");
 
 // Load an image (replace URL with your own)
-let img = await loadImage("https://i.imgur.com/5b3a4tF.png");
+let img = await loadImage("https://raw.githubusercontent.com/Githubuser102234/WidgetContent/refs/heads/main/IMG_0559.png");
 
 // Create a horizontal stack for image + text
 let stack = widget.addStack();
